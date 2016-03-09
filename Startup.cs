@@ -32,7 +32,8 @@ namespace affogato_osx
 
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
-            Configuration["Data:DefaultConnection:ConnectionString"] = $@"Data Source={appEnv.ApplicationBasePath}/affogato_osx.db";
+            // Configuration["Data:DefaultConnection:ConnectionString"] = $@"Data Source={appEnv.ApplicationBasePath}/affogato_osx.db";
+            Configuration["Data:DefaultConnection:ConnectionString"] = $@"mongodb://localhost:27017";
 
         }
 
